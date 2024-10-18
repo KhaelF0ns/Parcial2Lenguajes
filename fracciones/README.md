@@ -37,36 +37,6 @@ NEWLINE:'\r'? '\n' ;
 WS      : [ \t]+ -> skip ;
 ```
 
-## Instalación
-
-### Requisitos previos
-
-- **ANTLR4**: Asegúrese de que ANTLR4 esté instalado en su máquina. Puedes instalarlo siguiendo las instrucciones del [sitio web oficial](https://www.antlr.org/).
-- **Python 3.x**: Asegúrate de que Python esté instalado.
-
-### Pasos
-
-1. **Instalar pip** (si aún no está instalado):
-
-```bash
-sudo apt install python-pip
-```
-
-2. **Configurar un entorno virtual**:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-3. **Instalar las bibliotecas y dependencias requeridas**:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. 
-
 ## Uso
 
 ### Compilar la gramática ANTLR:
