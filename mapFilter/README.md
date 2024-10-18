@@ -108,14 +108,14 @@ antlr4 -visitor -Dlanguage=Python3 mapFilter.g4
 
 Esto generará los archivos Python necesarios para el analizador léxico y el analizador sintáctico.
 
-Puedes ejecutar el programa utilizando el script mapFilter.py.
+Puedes ejecutar el programa utilizando el script `mapFilter.py`.
 
 ### Ejecución con expresiones de prueba
 
 Para ejecutar el lenguaje con expresiones de prueba predefinidas:
 
 ```sh
-python3 mapFilter.py test_input.txt
+python3 mapFilter.py t.expr
 ```
 
 ### Ejecución interactiva
