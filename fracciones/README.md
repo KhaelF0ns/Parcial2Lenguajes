@@ -12,28 +12,29 @@ Este repositorio contiene una calculadora de fracciones basada en una gramática
 
 La gramática de la calculadora está definida en el archivo `calculadora.g4`. Las principales reglas gramaticales son:
 ```antlr
-prog: stat+ EOF;
+grammar calculadora;
 
-stat: expr NEWLINE # printExpr
-| NEWLINE # blank
-;
+prog:   stat+;
 
-expr: '-' expr # Negativo
-| expr op=('*'|'/') expr # MulDiv
-| expr op=('+'|'-') expr # AddSub
-| ABS expr ABS # AbsExpr
-| INT '/' INT # readFraction
-| '(' expr ')' # paréntesis
-;
+stat:   expr NEWLINE                # printExpr
+    ;
 
-MUL : '*' ;
-DIV : '/' ;
-ADD : '+' ;
-SUB : '-' ;
-ABS : '|' ;
-INT : [0-9]+ ;
-NEWLINE:'\r'? '\n' ;
-WS : [ \t]+ -> skip ;
+expr:   '-' expr                    # Negative
+    |   expr op=('*'|'/') expr      # MulDiv 
+    |   expr op=('+'|'-') expr      # AddSub
+    |   ABS expr ABS                # Abs
+    |   INT '/' INT                 # Fract
+    |   '(' expr ')'                # parens
+    ;
+
+MUL     : '*' ;
+DIV     : '/' ;
+ADD     : '+' ;
+SUB     : '-' ;
+ABS     : '|' ;
+INT     : [0-9]+ ;
+NEWLINE:'\r'? '\n' ;                         
+WS      : [ \t]+ -> skip ;
 ```
 
 ## Instalación
