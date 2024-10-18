@@ -14,6 +14,7 @@ filterFunction: 'filter' '(' lambdaExpr ',' iterable (',' iterable)*')' ;
 lambdaExpr: 'lambda' ID (',' ID)* ':' function;
 
 function: ID op var
+        | ID op STRING
         | ID'.upper()'
         | ID'.lower()'
         | ID'.capitalize()'

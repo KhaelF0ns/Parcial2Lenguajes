@@ -1,4 +1,4 @@
-# Generated from laplace.g4 by ANTLR 4.13.2
+# Generated from laplaceGrammar.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -41,9 +41,9 @@ def serializedATN():
         89,73,1,0,0,0,89,78,1,0,0,0,89,84,1,0,0,0,90,5,1,0,0,0,3,9,17,89
     ]
 
-class laplaceParser ( Parser ):
+class laplaceGrammarParser ( Parser ):
 
-    grammarFileName = "laplace.g4"
+    grammarFileName = "laplaceGrammar.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -109,17 +109,17 @@ class laplaceParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(laplaceParser.EOF, 0)
+            return self.getToken(laplaceGrammarParser.EOF, 0)
 
         def stat(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(laplaceParser.StatContext)
+                return self.getTypedRuleContexts(laplaceGrammarParser.StatContext)
             else:
-                return self.getTypedRuleContext(laplaceParser.StatContext,i)
+                return self.getTypedRuleContext(laplaceGrammarParser.StatContext,i)
 
 
         def getRuleIndex(self):
-            return laplaceParser.RULE_prog
+            return laplaceGrammarParser.RULE_prog
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterProg" ):
@@ -140,7 +140,7 @@ class laplaceParser ( Parser ):
 
     def prog(self):
 
-        localctx = laplaceParser.ProgContext(self, self._ctx, self.state)
+        localctx = laplaceGrammarParser.ProgContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_prog)
         self._la = 0 # Token type
         try:
@@ -158,7 +158,7 @@ class laplaceParser ( Parser ):
                     break
 
             self.state = 11
-            self.match(laplaceParser.EOF)
+            self.match(laplaceGrammarParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -177,7 +177,7 @@ class laplaceParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return laplaceParser.RULE_stat
+            return laplaceGrammarParser.RULE_stat
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -187,12 +187,12 @@ class laplaceParser ( Parser ):
 
     class BlankContext(StatContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.StatContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.StatContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NEWLINE(self):
-            return self.getToken(laplaceParser.NEWLINE, 0)
+            return self.getToken(laplaceGrammarParser.NEWLINE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBlank" ):
@@ -211,15 +211,15 @@ class laplaceParser ( Parser ):
 
     class PrintExprContext(StatContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.StatContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.StatContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def expr(self):
-            return self.getTypedRuleContext(laplaceParser.ExprContext,0)
+            return self.getTypedRuleContext(laplaceGrammarParser.ExprContext,0)
 
         def NEWLINE(self):
-            return self.getToken(laplaceParser.NEWLINE, 0)
+            return self.getToken(laplaceGrammarParser.NEWLINE, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrintExpr" ):
@@ -239,25 +239,25 @@ class laplaceParser ( Parser ):
 
     def stat(self):
 
-        localctx = laplaceParser.StatContext(self, self._ctx, self.state)
+        localctx = laplaceGrammarParser.StatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_stat)
         try:
             self.state = 17
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [7, 8, 11, 13, 14, 16, 17, 18, 19, 20]:
-                localctx = laplaceParser.PrintExprContext(self, localctx)
+                localctx = laplaceGrammarParser.PrintExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 13
                 self.expr()
                 self.state = 14
-                self.match(laplaceParser.NEWLINE)
+                self.match(laplaceGrammarParser.NEWLINE)
                 pass
             elif token in [23]:
-                localctx = laplaceParser.BlankContext(self, localctx)
+                localctx = laplaceGrammarParser.BlankContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 16
-                self.match(laplaceParser.NEWLINE)
+                self.match(laplaceGrammarParser.NEWLINE)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -280,7 +280,7 @@ class laplaceParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return laplaceParser.RULE_expr
+            return laplaceGrammarParser.RULE_expr
 
      
         def copyFrom(self, ctx:ParserRuleContext):
@@ -290,18 +290,18 @@ class laplaceParser ( Parser ):
 
     class AmortiguacionExpContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EULER(self):
-            return self.getToken(laplaceParser.EULER, 0)
+            return self.getToken(laplaceGrammarParser.EULER, 0)
         def POW(self):
-            return self.getToken(laplaceParser.POW, 0)
+            return self.getToken(laplaceGrammarParser.POW, 0)
         def MINUS(self):
-            return self.getToken(laplaceParser.MINUS, 0)
+            return self.getToken(laplaceGrammarParser.MINUS, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAmortiguacionExp" ):
@@ -320,16 +320,16 @@ class laplaceParser ( Parser ):
 
     class SenoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SIN(self):
-            return self.getToken(laplaceParser.SIN, 0)
+            return self.getToken(laplaceGrammarParser.SIN, 0)
         def OMEGA(self):
-            return self.getToken(laplaceParser.OMEGA, 0)
+            return self.getToken(laplaceGrammarParser.OMEGA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSeno" ):
@@ -348,30 +348,30 @@ class laplaceParser ( Parser ):
 
     class NPotenciaConDesplazamientoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def T(self, i:int=None):
             if i is None:
-                return self.getTokens(laplaceParser.T)
+                return self.getTokens(laplaceGrammarParser.T)
             else:
-                return self.getToken(laplaceParser.T, i)
+                return self.getToken(laplaceGrammarParser.T, i)
         def POW(self, i:int=None):
             if i is None:
-                return self.getTokens(laplaceParser.POW)
+                return self.getTokens(laplaceGrammarParser.POW)
             else:
-                return self.getToken(laplaceParser.POW, i)
+                return self.getToken(laplaceGrammarParser.POW, i)
         def N(self):
-            return self.getToken(laplaceParser.N, 0)
+            return self.getToken(laplaceGrammarParser.N, 0)
         def MULT(self):
-            return self.getToken(laplaceParser.MULT, 0)
+            return self.getToken(laplaceGrammarParser.MULT, 0)
         def EULER(self):
-            return self.getToken(laplaceParser.EULER, 0)
+            return self.getToken(laplaceGrammarParser.EULER, 0)
         def MINUS(self):
-            return self.getToken(laplaceParser.MINUS, 0)
+            return self.getToken(laplaceGrammarParser.MINUS, 0)
         def ALPHA(self):
-            return self.getToken(laplaceParser.ALPHA, 0)
+            return self.getToken(laplaceGrammarParser.ALPHA, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNPotenciaConDesplazamiento" ):
@@ -390,16 +390,16 @@ class laplaceParser ( Parser ):
 
     class NesimaPotenciaContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
         def POW(self):
-            return self.getToken(laplaceParser.POW, 0)
+            return self.getToken(laplaceGrammarParser.POW, 0)
         def N(self):
-            return self.getToken(laplaceParser.N, 0)
+            return self.getToken(laplaceGrammarParser.N, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNesimaPotencia" ):
@@ -418,14 +418,14 @@ class laplaceParser ( Parser ):
 
     class EscalonUnitarioContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def U(self):
-            return self.getToken(laplaceParser.U, 0)
+            return self.getToken(laplaceGrammarParser.U, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEscalonUnitario" ):
@@ -444,16 +444,16 @@ class laplaceParser ( Parser ):
 
     class CosenoHiperbolicoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def COSH(self):
-            return self.getToken(laplaceParser.COSH, 0)
+            return self.getToken(laplaceGrammarParser.COSH, 0)
         def ALPHA(self):
-            return self.getToken(laplaceParser.ALPHA, 0)
+            return self.getToken(laplaceGrammarParser.ALPHA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCosenoHiperbolico" ):
@@ -472,18 +472,18 @@ class laplaceParser ( Parser ):
 
     class LogaritmoNaturalContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def LOG(self):
-            return self.getToken(laplaceParser.LOG, 0)
+            return self.getToken(laplaceGrammarParser.LOG, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
         def DIV(self):
-            return self.getToken(laplaceParser.DIV, 0)
+            return self.getToken(laplaceGrammarParser.DIV, 0)
         def T0(self):
-            return self.getToken(laplaceParser.T0, 0)
+            return self.getToken(laplaceGrammarParser.T0, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLogaritmoNatural" ):
@@ -502,16 +502,16 @@ class laplaceParser ( Parser ):
 
     class FuncionDeBesselContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def J(self):
-            return self.getToken(laplaceParser.J, 0)
+            return self.getToken(laplaceGrammarParser.J, 0)
         def OMEGA(self):
-            return self.getToken(laplaceParser.OMEGA, 0)
+            return self.getToken(laplaceGrammarParser.OMEGA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFuncionDeBessel" ):
@@ -530,16 +530,16 @@ class laplaceParser ( Parser ):
 
     class SenoHiperbolicoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SINH(self):
-            return self.getToken(laplaceParser.SINH, 0)
+            return self.getToken(laplaceGrammarParser.SINH, 0)
         def ALPHA(self):
-            return self.getToken(laplaceParser.ALPHA, 0)
+            return self.getToken(laplaceGrammarParser.ALPHA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSenoHiperbolico" ):
@@ -558,16 +558,16 @@ class laplaceParser ( Parser ):
 
     class QesimaPotenciaContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
         def POW(self):
-            return self.getToken(laplaceParser.POW, 0)
+            return self.getToken(laplaceGrammarParser.POW, 0)
         def Q(self):
-            return self.getToken(laplaceParser.Q, 0)
+            return self.getToken(laplaceGrammarParser.Q, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterQesimaPotencia" ):
@@ -586,18 +586,18 @@ class laplaceParser ( Parser ):
 
     class RetrasoIdealContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DELTA(self):
-            return self.getToken(laplaceParser.DELTA, 0)
+            return self.getToken(laplaceGrammarParser.DELTA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
         def MINUS(self):
-            return self.getToken(laplaceParser.MINUS, 0)
+            return self.getToken(laplaceGrammarParser.MINUS, 0)
         def TAU(self):
-            return self.getToken(laplaceParser.TAU, 0)
+            return self.getToken(laplaceGrammarParser.TAU, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRetrasoIdeal" ):
@@ -616,18 +616,18 @@ class laplaceParser ( Parser ):
 
     class EscalonRetrasoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def U(self):
-            return self.getToken(laplaceParser.U, 0)
+            return self.getToken(laplaceGrammarParser.U, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
         def MINUS(self):
-            return self.getToken(laplaceParser.MINUS, 0)
+            return self.getToken(laplaceGrammarParser.MINUS, 0)
         def TAU(self):
-            return self.getToken(laplaceParser.TAU, 0)
+            return self.getToken(laplaceGrammarParser.TAU, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEscalonRetraso" ):
@@ -646,14 +646,14 @@ class laplaceParser ( Parser ):
 
     class ImpulsoUnitarioContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DELTA(self):
-            return self.getToken(laplaceParser.DELTA, 0)
+            return self.getToken(laplaceGrammarParser.DELTA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImpulsoUnitario" ):
@@ -672,16 +672,16 @@ class laplaceParser ( Parser ):
 
     class CosenoContext(ExprContext):
 
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceParser.ExprContext
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a laplaceGrammarParser.ExprContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def COS(self):
-            return self.getToken(laplaceParser.COS, 0)
+            return self.getToken(laplaceGrammarParser.COS, 0)
         def OMEGA(self):
-            return self.getToken(laplaceParser.OMEGA, 0)
+            return self.getToken(laplaceGrammarParser.OMEGA, 0)
         def T(self):
-            return self.getToken(laplaceParser.T, 0)
+            return self.getToken(laplaceGrammarParser.T, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCoseno" ):
@@ -701,220 +701,220 @@ class laplaceParser ( Parser ):
 
     def expr(self):
 
-        localctx = laplaceParser.ExprContext(self, self._ctx, self.state)
+        localctx = laplaceGrammarParser.ExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_expr)
         try:
             self.state = 89
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
-                localctx = laplaceParser.RetrasoIdealContext(self, localctx)
+                localctx = laplaceGrammarParser.RetrasoIdealContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 19
-                self.match(laplaceParser.DELTA)
+                self.match(laplaceGrammarParser.DELTA)
                 self.state = 20
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 21
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 22
-                self.match(laplaceParser.MINUS)
+                self.match(laplaceGrammarParser.MINUS)
                 self.state = 23
-                self.match(laplaceParser.TAU)
+                self.match(laplaceGrammarParser.TAU)
                 self.state = 24
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 2:
-                localctx = laplaceParser.ImpulsoUnitarioContext(self, localctx)
+                localctx = laplaceGrammarParser.ImpulsoUnitarioContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 25
-                self.match(laplaceParser.DELTA)
+                self.match(laplaceGrammarParser.DELTA)
                 self.state = 26
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 27
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 28
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 3:
-                localctx = laplaceParser.AmortiguacionExpContext(self, localctx)
+                localctx = laplaceGrammarParser.AmortiguacionExpContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 29
-                self.match(laplaceParser.EULER)
+                self.match(laplaceGrammarParser.EULER)
                 self.state = 30
-                self.match(laplaceParser.POW)
+                self.match(laplaceGrammarParser.POW)
                 self.state = 31
-                self.match(laplaceParser.MINUS)
+                self.match(laplaceGrammarParser.MINUS)
                 self.state = 32
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 pass
 
             elif la_ == 4:
-                localctx = laplaceParser.NPotenciaConDesplazamientoContext(self, localctx)
+                localctx = laplaceGrammarParser.NPotenciaConDesplazamientoContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
                 self.state = 33
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 34
-                self.match(laplaceParser.POW)
+                self.match(laplaceGrammarParser.POW)
                 self.state = 35
-                self.match(laplaceParser.N)
+                self.match(laplaceGrammarParser.N)
                 self.state = 36
-                self.match(laplaceParser.MULT)
+                self.match(laplaceGrammarParser.MULT)
                 self.state = 37
-                self.match(laplaceParser.EULER)
+                self.match(laplaceGrammarParser.EULER)
                 self.state = 38
-                self.match(laplaceParser.POW)
+                self.match(laplaceGrammarParser.POW)
                 self.state = 39
-                self.match(laplaceParser.MINUS)
+                self.match(laplaceGrammarParser.MINUS)
                 self.state = 40
-                self.match(laplaceParser.ALPHA)
+                self.match(laplaceGrammarParser.ALPHA)
                 self.state = 41
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 pass
 
             elif la_ == 5:
-                localctx = laplaceParser.EscalonUnitarioContext(self, localctx)
+                localctx = laplaceGrammarParser.EscalonUnitarioContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
                 self.state = 42
-                self.match(laplaceParser.U)
+                self.match(laplaceGrammarParser.U)
                 self.state = 43
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 44
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 45
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 6:
-                localctx = laplaceParser.EscalonRetrasoContext(self, localctx)
+                localctx = laplaceGrammarParser.EscalonRetrasoContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
                 self.state = 46
-                self.match(laplaceParser.U)
+                self.match(laplaceGrammarParser.U)
                 self.state = 47
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 48
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 49
-                self.match(laplaceParser.MINUS)
+                self.match(laplaceGrammarParser.MINUS)
                 self.state = 50
-                self.match(laplaceParser.TAU)
+                self.match(laplaceGrammarParser.TAU)
                 self.state = 51
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 7:
-                localctx = laplaceParser.NesimaPotenciaContext(self, localctx)
+                localctx = laplaceGrammarParser.NesimaPotenciaContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
                 self.state = 52
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 53
-                self.match(laplaceParser.POW)
+                self.match(laplaceGrammarParser.POW)
                 self.state = 54
-                self.match(laplaceParser.N)
+                self.match(laplaceGrammarParser.N)
                 pass
 
             elif la_ == 8:
-                localctx = laplaceParser.QesimaPotenciaContext(self, localctx)
+                localctx = laplaceGrammarParser.QesimaPotenciaContext(self, localctx)
                 self.enterOuterAlt(localctx, 8)
                 self.state = 55
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 56
-                self.match(laplaceParser.POW)
+                self.match(laplaceGrammarParser.POW)
                 self.state = 57
-                self.match(laplaceParser.Q)
+                self.match(laplaceGrammarParser.Q)
                 pass
 
             elif la_ == 9:
-                localctx = laplaceParser.SenoContext(self, localctx)
+                localctx = laplaceGrammarParser.SenoContext(self, localctx)
                 self.enterOuterAlt(localctx, 9)
                 self.state = 58
-                self.match(laplaceParser.SIN)
+                self.match(laplaceGrammarParser.SIN)
                 self.state = 59
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 60
-                self.match(laplaceParser.OMEGA)
+                self.match(laplaceGrammarParser.OMEGA)
                 self.state = 61
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 62
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 10:
-                localctx = laplaceParser.CosenoContext(self, localctx)
+                localctx = laplaceGrammarParser.CosenoContext(self, localctx)
                 self.enterOuterAlt(localctx, 10)
                 self.state = 63
-                self.match(laplaceParser.COS)
+                self.match(laplaceGrammarParser.COS)
                 self.state = 64
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 65
-                self.match(laplaceParser.OMEGA)
+                self.match(laplaceGrammarParser.OMEGA)
                 self.state = 66
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 67
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 11:
-                localctx = laplaceParser.SenoHiperbolicoContext(self, localctx)
+                localctx = laplaceGrammarParser.SenoHiperbolicoContext(self, localctx)
                 self.enterOuterAlt(localctx, 11)
                 self.state = 68
-                self.match(laplaceParser.SINH)
+                self.match(laplaceGrammarParser.SINH)
                 self.state = 69
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 70
-                self.match(laplaceParser.ALPHA)
+                self.match(laplaceGrammarParser.ALPHA)
                 self.state = 71
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 72
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 12:
-                localctx = laplaceParser.CosenoHiperbolicoContext(self, localctx)
+                localctx = laplaceGrammarParser.CosenoHiperbolicoContext(self, localctx)
                 self.enterOuterAlt(localctx, 12)
                 self.state = 73
-                self.match(laplaceParser.COSH)
+                self.match(laplaceGrammarParser.COSH)
                 self.state = 74
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 75
-                self.match(laplaceParser.ALPHA)
+                self.match(laplaceGrammarParser.ALPHA)
                 self.state = 76
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 77
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 13:
-                localctx = laplaceParser.LogaritmoNaturalContext(self, localctx)
+                localctx = laplaceGrammarParser.LogaritmoNaturalContext(self, localctx)
                 self.enterOuterAlt(localctx, 13)
                 self.state = 78
-                self.match(laplaceParser.LOG)
+                self.match(laplaceGrammarParser.LOG)
                 self.state = 79
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 80
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 81
-                self.match(laplaceParser.DIV)
+                self.match(laplaceGrammarParser.DIV)
                 self.state = 82
-                self.match(laplaceParser.T0)
+                self.match(laplaceGrammarParser.T0)
                 self.state = 83
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
             elif la_ == 14:
-                localctx = laplaceParser.FuncionDeBesselContext(self, localctx)
+                localctx = laplaceGrammarParser.FuncionDeBesselContext(self, localctx)
                 self.enterOuterAlt(localctx, 14)
                 self.state = 84
-                self.match(laplaceParser.J)
+                self.match(laplaceGrammarParser.J)
                 self.state = 85
-                self.match(laplaceParser.T__0)
+                self.match(laplaceGrammarParser.T__0)
                 self.state = 86
-                self.match(laplaceParser.OMEGA)
+                self.match(laplaceGrammarParser.OMEGA)
                 self.state = 87
-                self.match(laplaceParser.T)
+                self.match(laplaceGrammarParser.T)
                 self.state = 88
-                self.match(laplaceParser.T__1)
+                self.match(laplaceGrammarParser.T__1)
                 pass
 
 

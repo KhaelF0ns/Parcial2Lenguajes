@@ -10,7 +10,6 @@ class MyVisitor(mapFilterVisitor):
         iterable_elements = []
         for iterable in ctx.iterable():
             result = iterable.accept(self)
-            print(result)
             if result is not None:
                 iterable_elements.append(result)
 
@@ -23,7 +22,7 @@ class MyVisitor(mapFilterVisitor):
         # Usar eval para aplicar la función al iterable combinado
         # Desempaquetar los elementos combinados para pasar a la función lambda
         result = [eval(function_expr)(*args) for args in combined_elements]
-        print(result)
+        print(f"= {result}\n")
         return result
 
 
@@ -39,14 +38,14 @@ class MyVisitor(mapFilterVisitor):
                 iterable_elements.append(result)
 
         # Combinar los elementos de los iterables
-        combined_elements = list(zip(*iterable_elements))
+        combined_elements = tuple(zip(*iterable_elements))
 
         # Reemplazar 'lambda' para que Python lo reconozca
         function_expr = function_expr.replace("lambda", "lambda ")
 
         # Usar eval para filtrar el iterable combinado
-        result = [args for args in combined_elements if eval(function_expr)(*args)]
-        print(result)
+        result = [eval(function_expr)(*args) for args in combined_elements]
+        print(f"= {result}\n")
         return result
 
 

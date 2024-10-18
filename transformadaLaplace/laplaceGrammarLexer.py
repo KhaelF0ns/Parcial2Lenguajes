@@ -1,4 +1,4 @@
-# Generated from laplace.g4 by ANTLR 4.13.2
+# Generated from laplaceGrammar.g4 by ANTLR 4.13.2
 from antlr4 import *
 from io import StringIO
 import sys
@@ -48,7 +48,7 @@ def serializedATN():
         1,0,0,0,2,0,107,0
     ]
 
-class laplaceLexer(Lexer):
+class laplaceGrammarLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -96,7 +96,7 @@ class laplaceLexer(Lexer):
                   "T", "T0", "Q", "EULER", "ALPHA", "U", "J", "N", "SIN", 
                   "COS", "SINH", "COSH", "LOG", "OMEGA", "TAU", "NEWLINE" ]
 
-    grammarFileName = "laplace.g4"
+    grammarFileName = "laplaceGrammar.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)

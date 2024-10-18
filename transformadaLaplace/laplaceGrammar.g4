@@ -1,4 +1,4 @@
-grammar laplace;
+grammar laplaceGrammar;
 
 prog:   stat+ EOF;
 

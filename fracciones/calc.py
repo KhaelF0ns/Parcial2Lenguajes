@@ -19,6 +19,7 @@ def process_line(line, visitor):
         print(f"Error al procesar la línea: {line.strip()}")
         print(e)
 
+
 if __name__ == '__main__':
     visitor = MyVisitor()
 

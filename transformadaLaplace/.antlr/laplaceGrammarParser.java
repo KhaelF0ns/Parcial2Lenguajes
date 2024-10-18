@@ -1,4 +1,4 @@
-// Generated from /home/khaelf0ns/Documents/Parcial2Lenguajes/transformadaLaplace/laplace.g4 by ANTLR 4.13.1
+// Generated from /home/khaelf0ns/Documents/Parcial2Lenguajes/transformadaLaplace/laplaceGrammar.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class laplaceParser extends Parser {
+public class laplaceGrammarParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -78,7 +78,7 @@ public class laplaceParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "laplace.g4"; }
+	public String getGrammarFileName() { return "laplaceGrammar.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -89,14 +89,14 @@ public class laplaceParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public laplaceParser(TokenStream input) {
+	public laplaceGrammarParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ProgContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(laplaceParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(laplaceGrammarParser.EOF, 0); }
 		public List<StatContext> stat() {
 			return getRuleContexts(StatContext.class);
 		}
@@ -159,7 +159,7 @@ public class laplaceParser extends Parser {
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class BlankContext extends StatContext {
-		public TerminalNode NEWLINE() { return getToken(laplaceParser.NEWLINE, 0); }
+		public TerminalNode NEWLINE() { return getToken(laplaceGrammarParser.NEWLINE, 0); }
 		public BlankContext(StatContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
@@ -167,7 +167,7 @@ public class laplaceParser extends Parser {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode NEWLINE() { return getToken(laplaceParser.NEWLINE, 0); }
+		public TerminalNode NEWLINE() { return getToken(laplaceGrammarParser.NEWLINE, 0); }
 		public PrintExprContext(StatContext ctx) { copyFrom(ctx); }
 	}
 
@@ -234,112 +234,112 @@ public class laplaceParser extends Parser {
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class AmortiguacionExpContext extends ExprContext {
-		public TerminalNode EULER() { return getToken(laplaceParser.EULER, 0); }
-		public TerminalNode POW() { return getToken(laplaceParser.POW, 0); }
-		public TerminalNode MINUS() { return getToken(laplaceParser.MINUS, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode EULER() { return getToken(laplaceGrammarParser.EULER, 0); }
+		public TerminalNode POW() { return getToken(laplaceGrammarParser.POW, 0); }
+		public TerminalNode MINUS() { return getToken(laplaceGrammarParser.MINUS, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public AmortiguacionExpContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class SenoContext extends ExprContext {
-		public TerminalNode SIN() { return getToken(laplaceParser.SIN, 0); }
-		public TerminalNode OMEGA() { return getToken(laplaceParser.OMEGA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode SIN() { return getToken(laplaceGrammarParser.SIN, 0); }
+		public TerminalNode OMEGA() { return getToken(laplaceGrammarParser.OMEGA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public SenoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class NPotenciaConDesplazamientoContext extends ExprContext {
-		public List<TerminalNode> T() { return getTokens(laplaceParser.T); }
+		public List<TerminalNode> T() { return getTokens(laplaceGrammarParser.T); }
 		public TerminalNode T(int i) {
-			return getToken(laplaceParser.T, i);
+			return getToken(laplaceGrammarParser.T, i);
 		}
-		public List<TerminalNode> POW() { return getTokens(laplaceParser.POW); }
+		public List<TerminalNode> POW() { return getTokens(laplaceGrammarParser.POW); }
 		public TerminalNode POW(int i) {
-			return getToken(laplaceParser.POW, i);
+			return getToken(laplaceGrammarParser.POW, i);
 		}
-		public TerminalNode N() { return getToken(laplaceParser.N, 0); }
-		public TerminalNode MULT() { return getToken(laplaceParser.MULT, 0); }
-		public TerminalNode EULER() { return getToken(laplaceParser.EULER, 0); }
-		public TerminalNode MINUS() { return getToken(laplaceParser.MINUS, 0); }
-		public TerminalNode ALPHA() { return getToken(laplaceParser.ALPHA, 0); }
+		public TerminalNode N() { return getToken(laplaceGrammarParser.N, 0); }
+		public TerminalNode MULT() { return getToken(laplaceGrammarParser.MULT, 0); }
+		public TerminalNode EULER() { return getToken(laplaceGrammarParser.EULER, 0); }
+		public TerminalNode MINUS() { return getToken(laplaceGrammarParser.MINUS, 0); }
+		public TerminalNode ALPHA() { return getToken(laplaceGrammarParser.ALPHA, 0); }
 		public NPotenciaConDesplazamientoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class NesimaPotenciaContext extends ExprContext {
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
-		public TerminalNode POW() { return getToken(laplaceParser.POW, 0); }
-		public TerminalNode N() { return getToken(laplaceParser.N, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
+		public TerminalNode POW() { return getToken(laplaceGrammarParser.POW, 0); }
+		public TerminalNode N() { return getToken(laplaceGrammarParser.N, 0); }
 		public NesimaPotenciaContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class EscalonUnitarioContext extends ExprContext {
-		public TerminalNode U() { return getToken(laplaceParser.U, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode U() { return getToken(laplaceGrammarParser.U, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public EscalonUnitarioContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class CosenoHiperbolicoContext extends ExprContext {
-		public TerminalNode COSH() { return getToken(laplaceParser.COSH, 0); }
-		public TerminalNode ALPHA() { return getToken(laplaceParser.ALPHA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode COSH() { return getToken(laplaceGrammarParser.COSH, 0); }
+		public TerminalNode ALPHA() { return getToken(laplaceGrammarParser.ALPHA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public CosenoHiperbolicoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class LogaritmoNaturalContext extends ExprContext {
-		public TerminalNode LOG() { return getToken(laplaceParser.LOG, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
-		public TerminalNode DIV() { return getToken(laplaceParser.DIV, 0); }
-		public TerminalNode T0() { return getToken(laplaceParser.T0, 0); }
+		public TerminalNode LOG() { return getToken(laplaceGrammarParser.LOG, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
+		public TerminalNode DIV() { return getToken(laplaceGrammarParser.DIV, 0); }
+		public TerminalNode T0() { return getToken(laplaceGrammarParser.T0, 0); }
 		public LogaritmoNaturalContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class FuncionDeBesselContext extends ExprContext {
-		public TerminalNode J() { return getToken(laplaceParser.J, 0); }
-		public TerminalNode OMEGA() { return getToken(laplaceParser.OMEGA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode J() { return getToken(laplaceGrammarParser.J, 0); }
+		public TerminalNode OMEGA() { return getToken(laplaceGrammarParser.OMEGA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public FuncionDeBesselContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class SenoHiperbolicoContext extends ExprContext {
-		public TerminalNode SINH() { return getToken(laplaceParser.SINH, 0); }
-		public TerminalNode ALPHA() { return getToken(laplaceParser.ALPHA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode SINH() { return getToken(laplaceGrammarParser.SINH, 0); }
+		public TerminalNode ALPHA() { return getToken(laplaceGrammarParser.ALPHA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public SenoHiperbolicoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class QesimaPotenciaContext extends ExprContext {
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
-		public TerminalNode POW() { return getToken(laplaceParser.POW, 0); }
-		public TerminalNode Q() { return getToken(laplaceParser.Q, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
+		public TerminalNode POW() { return getToken(laplaceGrammarParser.POW, 0); }
+		public TerminalNode Q() { return getToken(laplaceGrammarParser.Q, 0); }
 		public QesimaPotenciaContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class RetrasoIdealContext extends ExprContext {
-		public TerminalNode DELTA() { return getToken(laplaceParser.DELTA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
-		public TerminalNode MINUS() { return getToken(laplaceParser.MINUS, 0); }
-		public TerminalNode TAU() { return getToken(laplaceParser.TAU, 0); }
+		public TerminalNode DELTA() { return getToken(laplaceGrammarParser.DELTA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
+		public TerminalNode MINUS() { return getToken(laplaceGrammarParser.MINUS, 0); }
+		public TerminalNode TAU() { return getToken(laplaceGrammarParser.TAU, 0); }
 		public RetrasoIdealContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class EscalonRetrasoContext extends ExprContext {
-		public TerminalNode U() { return getToken(laplaceParser.U, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
-		public TerminalNode MINUS() { return getToken(laplaceParser.MINUS, 0); }
-		public TerminalNode TAU() { return getToken(laplaceParser.TAU, 0); }
+		public TerminalNode U() { return getToken(laplaceGrammarParser.U, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
+		public TerminalNode MINUS() { return getToken(laplaceGrammarParser.MINUS, 0); }
+		public TerminalNode TAU() { return getToken(laplaceGrammarParser.TAU, 0); }
 		public EscalonRetrasoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class ImpulsoUnitarioContext extends ExprContext {
-		public TerminalNode DELTA() { return getToken(laplaceParser.DELTA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode DELTA() { return getToken(laplaceGrammarParser.DELTA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public ImpulsoUnitarioContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 	@SuppressWarnings("CheckReturnValue")
 	public static class CosenoContext extends ExprContext {
-		public TerminalNode COS() { return getToken(laplaceParser.COS, 0); }
-		public TerminalNode OMEGA() { return getToken(laplaceParser.OMEGA, 0); }
-		public TerminalNode T() { return getToken(laplaceParser.T, 0); }
+		public TerminalNode COS() { return getToken(laplaceGrammarParser.COS, 0); }
+		public TerminalNode OMEGA() { return getToken(laplaceGrammarParser.OMEGA, 0); }
+		public TerminalNode T() { return getToken(laplaceGrammarParser.T, 0); }
 		public CosenoContext(ExprContext ctx) { copyFrom(ctx); }
 	}
 

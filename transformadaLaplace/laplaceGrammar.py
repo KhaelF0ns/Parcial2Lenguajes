@@ -1,9 +1,9 @@
 import sys
 from antlr4 import *
 from antlr4.InputStream import InputStream
-from laplaceLexer import laplaceLexer
-from laplaceParser import laplaceParser
-from MyVisitor import LaplaceTransformVisitor
+from laplaceGrammarLexer import laplaceGrammarLexer
+from laplaceGrammarParser import laplaceGrammarParser
+from MyVisitor import MyVisitor
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
@@ -11,10 +11,10 @@ if __name__ == '__main__':
     else:
         input_stream = InputStream(sys.stdin.readline())
 
-    lexer = laplaceLexer(input_stream)
+    lexer = laplaceGrammarLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
-    parser = laplaceParser(token_stream)
+    parser = laplaceGrammarParser(token_stream)
     tree = parser.prog()
 
-    visitor = LaplaceTransformVisitor()
+    visitor = MyVisitor()
     visitor.visit(tree)
